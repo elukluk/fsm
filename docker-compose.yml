@@ -1,0 +1,7 @@
+services:
+  fsm-php:
+    build: .
+    container_name: fsm-php
+    volumes:
+      - .:/app
+    command: sh -c "vendor/bin/phpunit --testdox && php src/modThree.php"
